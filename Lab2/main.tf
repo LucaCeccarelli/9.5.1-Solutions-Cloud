@@ -17,7 +17,11 @@ module "nginx" {
   image_to_use = "nginx:latest"
   container_memory = "100"
   container_privileged = false
-  containers_to_spawn = 3
+  containers_to_spawn = 1
   container_port_start_point = 800
 }
 
+module "celian_lab2" {
+  source = "git::github.com/Cessouille/clouds-lab2/modules/nginx"
+  container_number = 3
+}
