@@ -10,6 +10,11 @@ variable "container_memory" {
   type        = number
   # In MBs
   default = 100
+  
+  validation {
+    condition     = var.container_memory >= 0
+    error_message = "container_memory must be 0 or greater."
+  }
 }
 
 variable "container_privileged" {
