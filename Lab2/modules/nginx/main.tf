@@ -7,10 +7,6 @@ terraform {
   }
 }
 
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
-
 # Create a NGINX ressource 
 resource "docker_image" "nginx" {
   name = var.image_to_use
