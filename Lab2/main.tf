@@ -22,6 +22,6 @@ module "nginx" {
 }
 
 module "celian_lab2" {
-  source = "git::github.com/Cessouille/clouds-lab2/modules/nginx"
+  source = "git::github.com/Cessouille/cours-clouds//lab2/modules/nginx"
   container_number = 3
 }
